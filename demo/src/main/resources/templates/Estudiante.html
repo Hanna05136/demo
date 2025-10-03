@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<body>
+<div layout:fragment="contenido">
+
+  <h2>
+    Bienvenido/a, <span th:text="${usuario}">Usuario</span> 👩‍🍳
+  </h2>
+  <p class="lead">Aquí puedes ver tus cursos disponibles y gestionar tu cuenta.</p>
+
+  <div class="row mt-4">
+    <!-- Ver Cursos Disponibles -->
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Ver Cursos Disponibles</h5>
+          <p class="card-text">Consulta todos los cursos de cocina activos e inscríbete.</p>
+          <a th:href="@{/cursos}" class="btn btn-primary">Ver Cursos Disponibles</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mis Cursos -->
+    <div class="col-md-6 mt-3 mt-md-0">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Mis Cursos</h5>
+          <p class="card-text">Accede a los cursos en los que estás inscrito/a actualmente.</p>
+          <a th:href="@{/mis-cursos}" class="btn btn-success">Ver Mis Cursos</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
